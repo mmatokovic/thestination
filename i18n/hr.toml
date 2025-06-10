@@ -1,0 +1,5 @@
+[wordCount]
+  other = "{{ .WordCount }} riječi"
+
+[header]
+  other = 'Pozdrav!'

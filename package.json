@@ -1,0 +1,8 @@
+{
+  "name": "thestination",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}

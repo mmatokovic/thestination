@@ -1,0 +1,5 @@
+[wordCount]
+  other = "{{ .WordCount }} words"
+
+[header]
+  other = 'Hello, there!'
