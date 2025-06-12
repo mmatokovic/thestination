@@ -1,0 +1,3 @@
+# Redirect default subdomain to primary domain
+# https://thestination.netlify.app  https://thestination.com 301!
+# http://thestination.netlify.app  https://thestination.com 301!

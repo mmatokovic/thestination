@@ -7,6 +7,14 @@ enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
 
+[params]
+  description = 'Destination management service offering tailored travel experiences, event planning, and local logistics to make every journey seamless and unforgettable.'
+  logo = '/favicon.ico'
+  licence = 'Apache License'
+[params.author]
+  name = "luka barbaric"
+  email = 'lukabarbaric@gmail.com'
+
 [languages]
   [languages.hr]
     languageCode = 'hr'
@@ -18,6 +26,10 @@ enableEmoji = true
         name = 'Početna'
         pageRef = '/'
         weight = 10
+      [[languages.hr.menus.main]]
+        name = 'O nama'
+        pageRef = '/about'
+        weight = 20
   [languages.en]
       languageCode = 'en'
       languageName = 'English'
@@ -28,6 +40,10 @@ enableEmoji = true
           name = 'Home'
           pageRef = '/'
           weight = 10
+        [[languages.en.menus.main]]
+          name = 'About'
+          pageRef = '/about'
+          weight = 20
 
 
 [frontmatter]
@@ -69,7 +85,7 @@ enableEmoji = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true # Allow HTML in md files
+      unsafe = true
     [markup.goldmark.parser]
       wrapStandAloneImageWithinParagraph = false
       [markup.goldmark.parser.attribute]
