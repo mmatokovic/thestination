@@ -11,6 +11,10 @@ enableEmoji = true
   description = 'Destination management service offering tailored travel experiences, event planning, and local logistics to make every journey seamless and unforgettable.'
   logo = '/favicon.ico'
   licence = 'Apache License'
+[params.links]
+  email = 'lukabarbaric@gmail.com'
+  instagram = ''
+  linkedin = ''
 [params.author]
   name = "luka barbaric"
   email = 'lukabarbaric@gmail.com'
