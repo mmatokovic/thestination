@@ -1,0 +1,16 @@
+{{- /*
+Renders a button with the given title and URL.
+
+@context {string} title The button text.
+@context {string} url The target URL.
+
+@example: {{ partial "button" (dict "title" "Read more" "url" "/about/") }}
+*/}}
+
+{{- $title := .title }}
+{{- $url := .url }}
+
+<a href="{{ $url }}"
+  class="uppercase inline-block rounded-sm border border-white px-6 py-3 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden">
+  {{ $title }}
+</a>

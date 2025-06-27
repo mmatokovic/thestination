@@ -11,13 +11,9 @@
         </p>
 
         <div class="mt-4 sm:mt-8">
-          <a
-            href="#"
-            class="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
-          >
-            Lorem ipsum
-          </a>
+          {{ partial "utils/button" (dict "title" "Read more" "url" "about") }}
         </div>
+
       </div>
     </div>
   </div>

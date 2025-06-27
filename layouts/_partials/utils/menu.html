@@ -21,7 +21,7 @@ Renders a menu for the given menu ID.
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL "class" "block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700" }}
+    {{- $attrs := dict "href" .URL "class" "block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700 uppercase" }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" (printf "%s active" $attrs.class) "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
