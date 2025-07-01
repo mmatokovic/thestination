@@ -1,6 +1,8 @@
-+++
-title = 'About'
-date = 2025-06-12T07:56:37+02:00
-draft = true
-menus = ["footer", "useful"]
-+++
+---
+date: "2025-06-12T07:56:37+02:00"
+draft: true
+menus:
+- footer
+- useful
+title: About
+---

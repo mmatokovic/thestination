@@ -11,6 +11,12 @@ importers:
       '@tailwindcss/cli':
         specifier: ^4.1.8
         version: 4.1.8
+      alpine-turbo-drive-adapter:
+        specifier: ^2.2.0
+        version: 2.2.0
+      alpinejs:
+        specifier: ^3.14.9
+        version: 3.14.9
       tailwindcss:
         specifier: ^4.1.8
         version: 4.1.8
@@ -213,6 +219,18 @@ packages:
   '@tailwindcss/oxide@4.1.8':
     resolution: {integrity: sha512-d7qvv9PsM5N3VNKhwVUhpK6r4h9wtLkJ6lz9ZY9aeZgrUWk1Z8VPyqyDT9MZlem7GTGseRQHkeB1j3tC7W1P+A==}
     engines: {node: '>= 10'}
+
+  '@vue/reactivity@3.1.5':
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+
+  '@vue/shared@3.1.5':
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+
+  alpine-turbo-drive-adapter@2.2.0:
+    resolution: {integrity: sha512-mf3blh3VE9Gz7XP7c3dhJxSYa34bcNxZq8fFSN9rOoJLp12q0lhnG3TpzyC6lt696xnC37B2p2yKwRRRdHF49A==}
+
+  alpinejs@3.14.9:
+    resolution: {integrity: sha512-gqSOhTEyryU9FhviNqiHBHzgjkvtukq9tevew29fTj+ofZtfsYriw4zPirHHOAy9bw8QoL3WGhyk7QqCh5AYlw==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -540,6 +558,18 @@ snapshots:
       '@tailwindcss/oxide-wasm32-wasi': 4.1.8
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.8
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.8
+
+  '@vue/reactivity@3.1.5':
+    dependencies:
+      '@vue/shared': 3.1.5
+
+  '@vue/shared@3.1.5': {}
+
+  alpine-turbo-drive-adapter@2.2.0: {}
+
+  alpinejs@3.14.9:
+    dependencies:
+      '@vue/reactivity': 3.1.5
 
   braces@3.0.3:
     dependencies:

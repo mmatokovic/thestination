@@ -11,9 +11,9 @@
     <div class="py-8 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
       <div class="lg:col-span-2">
         <ul class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {{ $paginator := .Paginate ( where site.RegularPages "Type" "destinations") 3 }}
+          {{ $paginator := .Paginate (where site.RegularPages "Section" "destinations") 3 }}
           {{ range $paginator.Pages }}
-            {{ partial "card" . }}
+            {{ .Render "card" }}
           {{ end }}
         </ul>
       </div>

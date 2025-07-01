@@ -11,6 +11,7 @@ enableEmoji = true
   description = 'Destination management service offering tailored travel experiences, event planning, and local logistics to make every journey seamless and unforgettable.'
   logo = '/favicon.ico'
   licence = 'Apache License'
+  alpine = true
 [params.links]
   email = 'lukabarbaric@gmail.com'
   instagram = ''
@@ -73,6 +74,12 @@ enableEmoji = true
     source       = "hugo_stats.json"
     target       = "assets/notwatching/hugo_stats.json"
     disableWatch = true
+  [[module.mounts]]
+    source = "node_modules/alpine-turbo-drive-adapter/dist"
+    target = "assets/js/libs/alpinejs-turbolinks"
+  [[module.mounts]]
+    source = "node_modules/alpinejs/dist"
+    target = "assets/js/libs/alpinejs"
 
 [build.buildStats]
   enable = true
