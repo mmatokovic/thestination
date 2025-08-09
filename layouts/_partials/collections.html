@@ -1,21 +1,42 @@
 <section>
   <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
     <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Explore our trips</h2>
-      
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Explore our destinations</h2>
       <p class="mt-4 max-w-md text-gray-500">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-        dicta incidunt est ipsam, officia dolor fugit natus?
+        Discover unforgettable tours and experiences in Croatia's most stunning destinations.
       </p>
     </header>
-    <div class="py-8 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-      <div class="lg:col-span-2">
-        <ul class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {{ $paginator := .Paginate (where site.RegularPages "Section" "destinations") 3 }}
-          {{ range $paginator.Pages }}
-            {{ .Render "card" }}
-          {{ end }}
-        </ul>
+    <div class="py-8">
+      <div class="flex flex-col sm:flex-row gap-2 h-auto sm:h-[400px]" x-data="{ active: null }">
+        {{ $paginator := .Paginate (where site.RegularPages "Section" "destinations") 4 }}
+        {{ range $index, $page := $paginator.Pages }}
+          <div class="relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 ease-in-out cursor-pointer flex-1 sm:h-full"
+            :class="active === null && {{ $index }} === 0 ? 'sm:flex-[3]' : active === {{ $index }} ? 'sm:flex-[3]' : 'sm:flex-[1]'"
+            @mouseenter="active = {{ $index }}"
+            @mouseleave="active = null"
+          >
+            {{ with $page.Resources.GetMatch $page.Params.thumbnail }}
+              <img
+                src="{{ .RelPermalink }}"
+                alt="{{ .Name }}"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-in-out opacity-90 hover:scale-105"
+              />
+            {{ end }}
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div class="relative z-10 p-4 sm:p-6 flex flex-col justify-end h-full">
+              <h3 class="text-white font-bold text-lg sm:text-2xl">{{ $page.LinkTitle }}</h3>
+              {{ if eq $index 0 }}
+                <p class="mt-1 sm:mt-2 text-white text-sm">{{ .Params.description }}</p>
+              {{ end }}
+              <div class="mt-2 sm:mt-4">
+                {{ partial "button" (dict "title" "Explore Trip" "url" $page.RelPermalink ) }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <div class="mt-2 sm:mt-4 flex justify-end">
+        {{ partial "button" (dict "title" "Explore Our Destinations" "url" "/destinations" "color" "black" ) }}
       </div>
     </div>
   </div>

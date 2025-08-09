@@ -35,6 +35,10 @@ enableEmoji = true
         name = 'O nama'
         pageRef = '/about'
         weight = 20
+      [[languages.hr.menus.main]]
+        name = 'Odredišta'
+        pageRef = '/destinations'
+        weight = 30
   [languages.en]
       languageCode = 'en'
       languageName = 'English'
@@ -49,6 +53,10 @@ enableEmoji = true
           name = 'About'
           pageRef = '/about'
           weight = 20
+        [[languages.en.menus.main]]
+          name = 'Destinations'
+          pageRef = '/destinations'
+          weight = 30
 
 
 [frontmatter]

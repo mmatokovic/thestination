@@ -5,4 +5,5 @@ menus:
 - footer
 - useful
 title: Frequently Asked Questions
+layout: faq
 ---

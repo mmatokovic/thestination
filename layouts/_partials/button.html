@@ -1,18 +1,30 @@
 {{- /*
-Renders a button with the given title and URL.
+Renders a button with the given title, URL, and optional color.
 
 @context {string} title The button text.
 @context {string} url The target URL.
+@context {string} color (optional) "white" or "black" - defaults to "white".
 
 @example: {{ partial "button" (dict "title" "Read more" "url" "/about/") }}
+@example: {{ partial "button" (dict "title" "Book now" "url" "/booking/" "color" "black") }}
 */}}
 
 {{- $title := .title }}
 {{- $url := .url }}
+{{- $color := default "white" .color }}
 
-<a
-  class="uppercase inline-block rounded-sm border border-white px-5 py-2.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden"
-  href="{{ $url }}"
+{{- if eq $color "black" }}
+  <a
+    class="uppercase inline-block rounded-sm border border-black px-5 py-2.5 text-xs font-medium text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden"
+    href="{{ $url }}"
   >
-  {{ $title }}
-</a>
+    {{ $title }}
+  </a>
+{{- else }}
+  <a
+    class="uppercase inline-block rounded-sm border border-white px-5 py-2.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden"
+    href="{{ $url }}"
+  >
+    {{ $title }}
+  </a>
+{{- end }}
