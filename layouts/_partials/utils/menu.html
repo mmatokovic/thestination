@@ -12,7 +12,7 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav class="px-4 py-6">
-    <ul class="flex items-center gap-6 text-sm">
+    <ul class="flex items-center gap-6 text-xs">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
   </nav>
@@ -21,7 +21,7 @@ Renders a menu for the given menu ID.
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL "class" "block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700 uppercase" }}
+    {{- $attrs := dict "href" .URL "class" "block rounded-lg px-4 py-2 text-xs font-medium hover:bg-gray-100 hover:text-gray-700 uppercase" }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" (printf "%s active" $attrs.class) "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
@@ -44,7 +44,7 @@ Renders a menu for the given menu ID.
       {{- with .Children }}
       <details class="group [&_summary::-webkit-details-marker]:hidden">
         <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-          <span class="text-sm font-medium"> {{ $name }} </span>
+          <span class="text-xs font-medium"> {{ $name }} </span>
           <span class="shrink-0 transition duration-300 group-open:-rotate-180">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>

@@ -16,6 +16,7 @@ enableEmoji = true
   email = 'lukabarbaric@gmail.com'
   instagram = ''
   facebook = ''
+  mobile = '+385 91 762 0018'
 [params.author]
   name = "luka barbaric"
   email = 'lukabarbaric@gmail.com'
@@ -28,35 +29,35 @@ enableEmoji = true
     weight = 1
     [languages.hr.menus]
       [[languages.hr.menus.main]]
-        name = 'Početna'
-        pageRef = '/'
+        name = 'Odredišta'
+        pageRef = '/destinations'
         weight = 10
+      [[languages.hr.menus.main]]
+        name = 'Iskustva'
+        pageRef = '/experiences'
+        weight = 20
       [[languages.hr.menus.main]]
         name = 'O nama'
         pageRef = '/about'
-        weight = 20
-      [[languages.hr.menus.main]]
-        name = 'Odredišta'
-        pageRef = '/destinations'
         weight = 30
   [languages.en]
-      languageCode = 'en'
-      languageName = 'English'
-      contentDir = 'content/en'
-      weight = 2
-      [languages.en.menus]
-        [[languages.en.menus.main]]
-          name = 'Home'
-          pageRef = '/'
-          weight = 10
-        [[languages.en.menus.main]]
-          name = 'About'
-          pageRef = '/about'
-          weight = 20
-        [[languages.en.menus.main]]
-          name = 'Destinations'
-          pageRef = '/destinations'
-          weight = 30
+    languageCode = 'en'
+    languageName = 'English'
+    contentDir = 'content/en'
+    weight = 2
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = 'Destinations'
+        pageRef = '/destinations'
+        weight = 10
+      [[languages.en.menus.main]]
+        name = 'Experiences'
+        pageRef = '/experiences'
+        weight = 20
+      [[languages.en.menus.main]]
+        name = 'About'
+        pageRef = '/about'
+        weight = 30
 
 
 [frontmatter]

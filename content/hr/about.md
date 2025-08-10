@@ -5,4 +5,5 @@ menus:
 - footer
 - useful
 title: About
+layout: about
 ---

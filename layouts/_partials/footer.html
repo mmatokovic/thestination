@@ -33,6 +33,13 @@
         <li>
           <a href="mailto:{{ .Site.Params.author.email }} " class="text-gray-700 transition hover:opacity-75">{{ .Site.Params.author.email }} </a>
         </li>
+        {{ range .Site.Menus.contact }}
+        <li>
+          <a class="text-gray-700 transition hover:opacity-75" href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+              {{ .Pre }}<span>{{ i18n .Identifier | default .Name}}</span>{{ .Post }}
+          </a>
+        </li>
+        {{ end }}
       </ul>
     </div>
 
