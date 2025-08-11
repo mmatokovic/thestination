@@ -1,25 +1,24 @@
-<section class="bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
-  <div
-    class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
-    <div class="lg:w-1/2">
-      <div class="h-64 bg-cover lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')"></div>
-    </div>
-
-    <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-        Build Your New <span class="text-blue-500">Idea</span>
+<section 
+  class="bg-gray-50 h-fit overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat py-8"
+  style="{{ with resources.Get "img/aerial-photo-of-city.jpg" }}background-image:url('{{ .RelPermalink }}');{{ end }}">
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div class="mx-auto max-w-lg text-center">
+      <h2 class="text-2xl font-bold text-white md:text-3xl uppercase">
+        Find your experience
       </h2>
 
-      <p class="mt-4 text-gray-500 dark:text-gray-300">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-        mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+      <p class="hidden text-white sm:mt-4 sm:block">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officia blanditiis
+        repellat in, vero, aperiam porro ipsum laboriosam consequuntur exercitationem incidunt
+        tempora nisi?
       </p>
+    </div>
 
-      <div class="inline-flex w-full mt-6 sm:w-auto">
-        <a href="#" class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-          Start Now
-        </a>
+    <div class="mx-auto mt-8 max-w-xl">
+      <div class="mt-4 flex w-full items-center justify-center">
+        <button class="uppercase inline-block rounded-sm border border-white px-5 py-2.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden">
+          <span class="text-sm font-medium"> Enquire Now </span>
+        </button>
       </div>
     </div>
   </div>
