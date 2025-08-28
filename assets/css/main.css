@@ -2,6 +2,8 @@
 @plugin '@tailwindcss/typography';
 @source "hugo_stats.json";
 
+@source inline('underline');
+
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
