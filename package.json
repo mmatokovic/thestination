@@ -2,10 +2,10 @@
   "name": "thestination",
   "version": "1.0.0",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.8",
+    "@tailwindcss/cli": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "alpine-turbo-drive-adapter": "^2.2.0",
     "alpinejs": "^3.14.9",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.12"
   }
 }
