@@ -17,11 +17,10 @@ Renders a menu for the given menu ID.
     </ul>
   </nav>
 {{- end }}
-
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL "class" "block rounded-lg px-4 py-2 text-xs font-medium hover:bg-gray-100 hover:text-gray-700 uppercase" }}
+    {{- $attrs := dict "href" .URL "class" "text-xs font-medium uppercase relative hover:text-gray-500/85 [&::before]:content-[''] [&::before]:absolute [&::before]:-bottom-1 [&::before]:left-0 [&::before]:h-0.5 [&::before]:w-full [&::before]:origin-left [&::before]:scale-x-0 [&::before]:bg-gradient-to-r [&::before]:from-amber-300 [&::before]:to-amber-600 [&::before]:transition hover:[&::before]:scale-x-100" }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" (printf "%s active" $attrs.class) "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}

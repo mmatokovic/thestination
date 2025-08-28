@@ -18,13 +18,13 @@ Renders a button with the given title, URL, and optional color.
     class="uppercase inline-block rounded-sm border border-black px-5 py-2.5 text-xs font-medium text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden"
     href="{{ $url }}"
   >
-    {{ $title }}
+    <span class="text-sm font-medium"> {{ $title }} </span>
   </a>
 {{- else }}
   <a
     class="uppercase inline-block rounded-sm border border-white px-5 py-2.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out focus:ring-3 focus:outline-hidden"
     href="{{ $url }}"
   >
-    {{ $title }}
+    <span class="text-sm font-medium"> {{ $title }} </span>
   </a>
 {{- end }}

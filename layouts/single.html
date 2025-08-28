@@ -1,7 +1,20 @@
-{{ define "main" }}
+{{define "main"}}
 <section>
-  <article class="prose lg:prose-xl max-w-none prose-img:mx-auto text-pretty">
-    {{ .Content }}
-  </article>
+  <div class="mx-auto max-w-screen-xl mt-8 px-4 sm:px-6 lg:px-8">
+    <header class="text-center py-12">
+      <h1 class="font-extralight uppercase text-4xl leading-[1.99]">
+        {{ .Title }}
+      </h1>
+    </header>
+    <div class="px-6">
+      {{ with .Resources.GetMatch .Params.thumbnail }}
+        <img src="{{ .RelPermalink }}"
+              class="object-fill overflow-hidden rounded-lg" width="100%" alt="{{ .Params.title }}" />
+      {{ end }}
+    </div>
+    <article class="pt-6 pb-16 prose lg:prose-xl max-w-none">
+      {{ .Content }}
+    </article>
+  </div>
 </section>
-{{ end }}
+{{end}}

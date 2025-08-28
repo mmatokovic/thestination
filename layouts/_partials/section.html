@@ -1,23 +1,45 @@
+{{ $sail := resources.Get "img/artem-verbo-zHg5TXgVoGQ-unsplash.jpg" }}
+{{ $town := resources.Get "img/geio-tischler-tQT5KiZSKpE-unsplash.jpg" }}
 <section>
-  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+  <div class="flex mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
       <div>
         <div class="max-w-lg md:max-w-none">
           <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            GETTING CALM IN CROATIA
           </h2>
 
           <p class="mt-4 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
-            architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
-            sequi.
+            Famed for its crystal-clear waters and enchanting medieval towns, Croatia continually captures our imagination and stands proudly as a cultural gem of Eastern Europe. Visitors are invited to explore centuries-old monasteries, the dazzling Adriatic coastline, charming harbor villages, and mouthwatering seafood. Our carefully designed journeys highlight both the country’s iconic landmarks and its hidden, authentic corners—where local life still thrives. In this radiant land of sun and sea, luxury feels limitless.
           </p>
         </div>
       </div>
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="{{ $town.RelPermalink }}"
+          class="rounded"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-row-reverse mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8" dir="rtl">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
+      <div dir="ltr">
+        <div class="max-w-lg md:max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+            SET SAIL ON THE ADRIATIC
+          </h2>
+          
+          <p class="mt-4 text-gray-700">
+            Undoubtedly one of Croatia’s most coveted journeys, a custom-crafted escape through the sunlit Adriatic islands is the essence of nautical indulgence. With a handpicked route designed by our specialists and guided by private experts, you’ll sail seamlessly from Korčula to Hvar and the gems in between. Step into secluded grottos, savor local flavors at authentic tavernas, cycle along the coast on a beach cruiser, and let the sparkling turquoise waters become your temporary home—an exclusive holiday refined and approved by our own travel connoisseurs.
+          </p>
+        </div>
+      </div>
+      <div>
+        <img
+          src="{{ $sail.RelPermalink }}"
           class="rounded"
           alt=""
         />
