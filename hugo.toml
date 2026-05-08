@@ -1,4 +1,4 @@
-baseURL = 'https://thestination.netlify.app/'
+baseURL = 'https://thestination.com/'
 locale = 'hr'
 title = 'Thestination'
 defaultContentLanguage = 'hr'
