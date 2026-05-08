@@ -1,3 +1,7 @@
+.idea
+.vscode/
+.DS_Store
+
 # dependencies
 /node_modules
 package.hugo.json

@@ -1,5 +1,5 @@
 baseURL = 'https://thestination.netlify.app/'
-languageCode = 'hr'
+locale = 'hr'
 title = 'Thestination'
 defaultContentLanguage = 'hr'
 
@@ -23,8 +23,8 @@ enableEmoji = true
 
 [languages]
   [languages.hr]
-    languageCode = 'hr'
-    languageName = 'Hrvatski'
+    locale = 'hr'
+    label = 'Hrvatski'
     contentDir = 'content/hr'
     weight = 1
     [languages.hr.menus]
@@ -41,8 +41,8 @@ enableEmoji = true
         pageRef = '/about'
         weight = 30
   [languages.en]
-    languageCode = 'en'
-    languageName = 'English'
+    locale = 'en'
+    label = 'English'
     contentDir = 'content/en'
     weight = 2
     [languages.en.menus]
