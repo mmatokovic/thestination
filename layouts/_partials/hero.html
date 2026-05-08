@@ -1,9 +1,9 @@
 <section>
   <div class="relative">
     {{ $video := resources.Get "vid/croatia.mp4" }}
-    {{ $image := resources.Get "img/Destinations-Croatia-Hero-Desktop.avif" }}
     {{ with $video }}
-    <video class="h-full w-full" loop playsinline autoPlay muted poster="{{ $image.RelPermalink }}" preload="metadata">
+    {{ $image := resources.Get "img/Destinations-Croatia-Hero-Desktop.avif" }}
+    <video class="h-full w-full object-cover" loop playsinline autoplay muted poster="{{ with $image }}{{ .RelPermalink }}{{ end }}" preload="metadata">
       <source src="{{ .RelPermalink }}" type="video/mp4" />
       Your browser does not support the video tag.
     </video>

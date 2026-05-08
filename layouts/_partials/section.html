@@ -16,11 +16,13 @@
       </div>
 
       <div>
+        {{ with $town }}
         <img
-          src="{{ $town.RelPermalink }}"
+          src="{{ .RelPermalink }}"
           class="rounded"
-          alt=""
+          alt="Historic Croatian coastal town"
         />
+        {{ end }}
       </div>
     </div>
   </div>
@@ -31,18 +33,20 @@
           <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
             SET SAIL ON THE ADRIATIC
           </h2>
-          
+
           <p class="mt-4 text-gray-700">
             Undoubtedly one of Croatia’s most coveted journeys, a custom-crafted escape through the sunlit Adriatic islands is the essence of nautical indulgence. With a handpicked route designed by our specialists and guided by private experts, you’ll sail seamlessly from Korčula to Hvar and the gems in between. Step into secluded grottos, savor local flavors at authentic tavernas, cycle along the coast on a beach cruiser, and let the sparkling turquoise waters become your temporary home—an exclusive holiday refined and approved by our own travel connoisseurs.
           </p>
         </div>
       </div>
       <div>
+        {{ with $sail }}
         <img
-          src="{{ $sail.RelPermalink }}"
+          src="{{ .RelPermalink }}"
           class="rounded"
-          alt=""
+          alt="Sailing on the Adriatic Sea"
         />
+        {{ end }}
       </div>
     </div>
   </div>
